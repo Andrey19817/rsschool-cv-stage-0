@@ -16,3 +16,16 @@ My name is Andrey, I am 40 years old, I want to make my life better and more int
 * HTML
 * CSS
 * JavaScript(Basic)
+***
+## Code Example
+```
+function highAndLow(numbers){
+    let res = numbers.split(' ').map(elem => elem*1)
+    return `${Math.max(...res)} ${Math.min(...res)}`
+  }
+```
+***
+## Experience
+## Education
+## English
+**A0-A1** (I continue to develop)
