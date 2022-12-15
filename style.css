@@ -39,13 +39,7 @@ h2{
     justify-content: space-around;
     align-items: center;
 }
-/* .foto{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    outline: 3px solid #829985;
-    background-image: url("assets/img/uuuu-780x435.jpeg");
-} */
+
 .name{
     margin-left: 40%;
     font-size: 22px;
