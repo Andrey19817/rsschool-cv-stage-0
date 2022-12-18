@@ -20,8 +20,8 @@ My name is Andrey, I am 40 years old, I want to make my life better and more int
 ## Code Example
 ```
 function highAndLow(numbers){
-    let res = numbers.split(' ').map(elem => elem*1)
-    return `${Math.max(...res)} ${Math.min(...res)}`
+    let res = numbers.split('').map(elem => elem*1)
+    return `max - ${Math.max(...res)}, min - ${Math.min(...res)}`
   }
 ```
 ***
