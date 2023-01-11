@@ -1,16 +1,19 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: #F5F5F5;
 }
 .wrapper{
-    width: 1440px;
+    min-width: 1440px;
     margin: auto;
 }
 main{
-    width: 1440px;
+    min-width: 1440px;
     margin: auto;
 }
 header{
-width: 1440px;
+min-width: 1440px;
 height: 134px;
 margin: auto;
 display: flex;
@@ -67,7 +70,7 @@ text-decoration: none;
 /* ------------------------------------------------ */
 
 .welcome{
-width: 1440px;
+min-width: 1440px;
 height: 532px;
 margin: auto;
 background-color:#EDF2EC;
@@ -76,7 +79,7 @@ padding: .1px;
 .welcome_section{
 width: 1222px;
 height: 407.36px;
-margin: auto;
+margin:70px auto 0px;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -168,6 +171,7 @@ height: 350px;
 .about_us_section_text_2{
 width: 605px;
 height: 208px;
+margin-top: 50px;
 font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 400;
@@ -177,15 +181,19 @@ color: #636060;
 }
 /* ---------------------------------------------------- */
 .service{
-    width: 1440px;
+    min-width: 1440px;
     height: 1300px;
     background: #EDF2EC;
     overflow: hidden;
 }
+.wrapper_service_nav_content{
+    width: 1222px;
+    margin: auto;
+}
 .service_nav_content{
     width: 1007px;
     height: 94px;
-    margin:40px 0 0 109px;
+    margin-top:45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -265,7 +273,7 @@ height: 450px;
 }
 /* ------------------------------------------------------ */
 .prices{
-    width: 1440px;
+    min-width: 1440px;
     height: 560px;
     background: #FFFFFF;
     overflow: hidden;
@@ -273,7 +281,7 @@ height: 450px;
 .prices_wrapper{
     width: 1222px;
     height: 405px;
-    margin: 40px 109px 0;
+    margin: 40px auto;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
@@ -381,7 +389,7 @@ border-radius: 5px;
 }
 /* ------------------------------------------- */
 .wrapper_contacts{
-    width: 1440px;
+    min-width: 1440px;
     height: 550px;
     background: #EDF2EC;
     overflow: hidden;   
@@ -399,6 +407,8 @@ border-radius: 5px;
     background-image: url('assets/img/contact_woman\ 1.png');
 }
 .Contact_us{
+    margin-top: 0px;
+    margin-left: 4%;
     width: 195px;
     height: 51px;
     font-family: 'Inika', serif;
@@ -443,7 +453,7 @@ border-radius: 5px;
 }
 /* ------------------------------------------ */
 footer{
-    width: 1440px;
+    min-width: 1440px;
     height: 130px;
     background: #FFFFFF;
     display: flex;
@@ -469,7 +479,6 @@ footer{
     align-items: center;   
 }
 .footer_data_github, .footer_data_data{
-    margin-left: 20px;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     font-style: normal;
@@ -479,7 +488,17 @@ footer{
     color: #000000;
     transition: all .8s;   
 }
+.footer_data_github{
+    display: block;
+    margin-left: 35%;
+}
+.footer_data_data{
+    margin-left: 15%; 
+}
 .rs_scholl{
+    display: block;
+    width: 100%;
+    margin-left: 10%;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
