@@ -834,9 +834,11 @@ footer{
     }
     .burger{
         display: block;
+        position: fixed;
         width: 40px;
         height: 24px;
-        margin-left: -8%;
+        margin-left: 56%;
+        transition: all .4s;
     }
     .burger:hover{
         cursor: pointer;
@@ -845,36 +847,32 @@ footer{
         margin-top: 4%;
         position: fixed;
         height: 40px;
-        margin-left: 44%;
+        margin-left: 47%;
         background-image: url('assets/img/4225690.png');
         background-size: 100%;
-        transition: all .2s;
+        transition: all .4s;
     }
     .burger_img_active{
         display: none;
+        transition: all .4s;
     }
     .navbar{
         width: 330px;
         height: 24px;
     }
-    .nav{
-        width: auto;
-        display: none;
-    }
-    .nav_active{
-        display: block;
-        transition: all .8s;
-    }
     .nav_ul{
         display: block;
+        position: absolute;
         width: 100px;
         height: 20vh;
         padding: 10px;
         background-color: rgba(193,230,152,0.5);
         z-index: 10;
+        margin-left: 300px;
+        transition: all .8s;
     }
     .nav_ul_active{
-        margin-left: -30%;
+        margin-left: 40%;
         transition: all .8s;
         position: fixed;
     }
