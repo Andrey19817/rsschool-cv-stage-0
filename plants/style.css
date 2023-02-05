@@ -1,12 +1,15 @@
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
     background: #F5F5F5;
+    overflow-x: hidden;
 }
 .wrapper{
     min-width: 1440px;
     margin: auto;
+    overflow: hidden;
 }
 main{
     min-width: 1440px;
@@ -244,7 +247,8 @@ grid-column-gap: 117px;
 }
 .service_item{
 width: 330px;
-height: 450px; 
+height: 450px;
+transition: all .8s; 
 }
 .service_item_img{
     width: 329px;
@@ -395,7 +399,7 @@ border-radius: 5px;
 /* ------------------------------------------- */
 .wrapper_contacts{
     min-width: 1440px;
-    height: 550px;
+    /* height: 550px; */
     background: #EDF2EC;
     overflow: hidden;   
 }
@@ -446,7 +450,7 @@ border-radius: 5px;
     color: #717171;   
 }
 .contacts_city_btn{
-    width: 16px;
+    /* width: 16px; */
     height: 16px;
     margin-left: 175px;
     background: #D9D9D9;
@@ -822,10 +826,12 @@ footer{
     width: 188px;
     height: 50px
 }
+/* ---------------------------------------------- */
 }
 @media(max-width:380px){
     .wrapper{
         min-width: 380px;
+        overflow: hidden;
     }
     header{
         min-width: 380px;
@@ -834,10 +840,11 @@ footer{
     }
     .burger{
         display: block;
-        position: fixed;
+        /* position: fixed; */
         width: 40px;
         height: 24px;
-        margin-left: 56%;
+        margin-left: 68%;
+        margin-top: -8px;
         transition: all .4s;
     }
     .burger:hover{
@@ -1167,7 +1174,7 @@ footer{
         width: 300px;
         height: 50px;
         margin-top: 60px;
-        margin-left: -9px;
+        /* margin-left: -9px; */
         order: 2;
     }
     .contacts_city_btn{
@@ -1212,7 +1219,282 @@ footer{
     }
 }
 /* --------------------------------- */
+.blur{
+    filter: blur(4px);
+    transition: all .8s;
+}
+.btn_active{
+    transform: scale(1.1);
+    background: #E06733;
+    color: #FFFFFF;
+}
+/* -----------------------------------------выпадающие списки */
 
+.price_item_window{
+    position: absolute;
+    margin-top: 107px;
+    width: 250px;
+    height: 154px;
+    background: #D6E7D2;
+    border-radius: 20px;
+
+}
+.price_item_window_text_1{
+font-family:'Roboto', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 20px;
+color: #000000;
+margin-left: 40px;
+margin-top: 16px;
+}
+.price_item_window_line{
+    width: 164px;
+    height: 0px;
+    border: 0.5px solid #AEA1A1; 
+    margin-left: 40px;
+    margin-top: 12px;
+}
+.price_item_window_text_2{
+width: 169px;
+height: 30px;
+font-family:'Roboto', sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 10px;
+color: #717171;
+margin-left: 40px;
+margin-top: 6px;
+}
+.price_item_window_text_order{
+    font-family:'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px; 
+    margin-left: 40px;
+    margin-top: 6px;     
+}
+.price_item_window_text_order_span{
+    color: #E06733;
+}
+.price_item_window_btn{
+    width: 86px;
+    height: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-top: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 4px; 
+}
+.price_item_window_1{
+display: none;
+}
+.price_item_window_2{
+    display: none;
+}
+.price_item_window_3{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+.btn_window_3 ,.btn_window_2 ,.btn_window_1 ,.contacts_city_btn{
+    transition: all .0s;
+}
+/* --------------------------------------------- */
+.contacts_city_window{
+    z-index: -10;
+    position: absolute;
+    margin-left: 771px;
+    margin-top: 146px;
+    width: 454px;
+    height: 234px;
+    background: #DCE9D9;  
+}
+.contacts_city_window_active{
+    z-index: 0;
+}
+.item_city{
+width: 218px;
+height: 35px;
+margin-left:26px ;
+margin-top: 12px;
+font-family:'Roboto', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 40px;
+letter-spacing: 0.05em;
+color: #499A18;
+}
+.item_city_line{
+    width: 380px;
+    height: 0px;
+    margin-left: 20px;
+    left: 569px;
+    top: 589px;
+    border: 1px solid #D9D9D9; 
+}
+.item_city_line_active{
+    border: 1px solid #717171;
+}
+.item_city:hover{
+    cursor: pointer;
+    color: #717171;
+}
+/* ---------------------------------------- */
+
+.city_card{
+    display: none;
+    margin-left: 775px;
+    margin-top: 198px;
+    position: absolute;
+    width: 448px;
+    height: 214px;
+    background: #EDF2EC;
+border: 1px solid #000000;
+border-radius: 20px;
+}
+.info_for_city{
+    margin-left: 35px;
+    margin-top: 17px;
+    width: 339px;
+    height: 165px; 
+    text-align: center;
+}
+.city,.phone,.office{
+    display: flex;
+}
+.text_city,.text_phone,.text_office{
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 40px;
+letter-spacing: 0.05em;
+color: #000000;
+}
+.city_name,.city_phone,.city_office{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;    
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+.city_name{
+    margin-left: 96px;
+}
+.city_phone{
+    margin-left: 78px;
+}
+.city_office{
+    margin-left: 19px;
+}
+.city_btn_call_us{
+    width: 122px;
+    height: 26px;
+    margin-left: 38px;
+    margin-top: 20px;
+    font-family: 'Inika', serif;
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 13px;
+text-align: center;
+color: #717171;
+border: 1px solid #E06733;
+border-radius: 5px;
+}
+.accordion_btn:hover{
+    background: #D9D9D9;
+}
+.contacts_city_btn:hover{
+    background: #D9D9D9;
+}
+@media(max-width:768px){
+    .contacts_city_window {
+        margin-left: 0px;
+        margin-top: 205px;
+    }
+    .city_card{
+        margin-left: 0px; 
+        margin-top: 222px;  
+    }
+}
+@media(max-width:380px){
+    .contacts_city_window{
+        width: 300px;
+        height: 212px; 
+        margin-top: 161px; 
+    }
+    .item_city_line{
+        width: 240px;
+    }
+    .city_card{
+        width: 282px;
+        height: 212px;
+        margin-left: 0px; 
+        margin-top: 180px;
+    }
+    .info_for_city{
+        text-align: unset;
+    }
+    .info_for_city{
+        width: 210px;
+        height: 166px;
+    }
+    .city,.phone,.office{
+        width: 206.02px;
+        height: 43px;
+    }
+    .text_office,.text_phone,.text_city{
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0.05em;
+color: #000000;
+    }
+    .city_office,.city_phone,.city_name{
+        margin-left:auto;
+        width: 131.37px;
+        height: 41px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;        
+        letter-spacing: 0.05em;       
+        color: #717171;
+    }
+    .price_item_window{
+        position: absolute;
+        margin-top: 107px;
+        width: 220px;
+        height: 154px;
+        background: #D6E7D2;
+        border-radius: 20px;
+        margin-left: -20px;
+    }
+    .price_item_window_text_1,.price_item_window_line,.price_item_window_text_2,.price_item_window_text_order,.price_item_window_btn{
+        margin-left: 30px;
+    }
+}
 
 
 
